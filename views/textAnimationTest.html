@@ -68,39 +68,57 @@
     </p>
 
     <button id="replyBtn">動畫重播</button>
+    <button id="skipBtn">跑完全部文字</button>  
   </div>
 
-  <script>
+    <script>
     const p = document.getElementById("text");
-    const btn = document.getElementById("replyBtn");
+    const replayBtn = document.getElementById("replyBtn");
+    const skipBtn = document.getElementById("skipBtn");
 
-    const fullText = p.innerText; // 原始文字
+    const fullText = p.innerText;
     let index = 0;
     let timer = null;
+    let isPlaying = false;
 
     function playTextAnimation(speed = 100) {
-      clearInterval(timer);
-      p.innerText = "";
-      index = 0;
+        clearInterval(timer);
+        p.innerText = "";
+        index = 0;
+        isPlaying = true;
 
-      timer = setInterval(() => {
+        timer = setInterval(() => {
+        if (!isPlaying) return;
+
         p.innerText += fullText[index];
         index++;
 
         if (index >= fullText.length) {
-          clearInterval(timer);
+            finishText();
         }
-      }, speed);
+        }, speed);
     }
 
-    // 預設自動播放
+    function finishText() {
+        clearInterval(timer);
+        p.innerText = fullText;
+        isPlaying = false;
+    }
+
+    // 預設播放
     playTextAnimation(100);
 
-    // 點擊重播
-    btn.addEventListener("click", () => {
-      playTextAnimation(100);
+    // 動畫重播
+    replayBtn.addEventListener("click", () => {
+        playTextAnimation(100);
     });
-  </script>
+
+    // 跑完全部文字
+    skipBtn.addEventListener("click", () => {
+        finishText();
+    });
+    </script>
+
 </body>
 
 </html>
