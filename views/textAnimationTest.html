@@ -104,18 +104,23 @@
 
     <button id="replyBtn">動畫重播</button>
     <button id="skipBtn">跑完全部文字</button>  
+    <button id="speedupBtn">⏩<span id="speedRate">1</span>x</button>  
   </div>
 
     <script>
     const p = document.getElementById("text");
     const replayBtn = document.getElementById("replyBtn");
     const skipBtn = document.getElementById("skipBtn");
+    const speedupBtn = document.getElementById("speedupBtn");
+    const speedRateDisplay = document.getElementById("speedRate");
 
     const fullText = p.innerText;
     let index = 0;
     let timer = null;
     let isPlaying = false;
     let initSpeed = 100;
+    let speedRates = [1, 2, 3];
+    let currentSpeedIndex = 0;
     let speed = initSpeed;
     
     function playTextAnimation(speed = 100) {
@@ -153,6 +158,18 @@
     // 跑完全部文字
     skipBtn.addEventListener("click", () => {
         finishText();
+    });
+
+    // 調整速度
+    speedupBtn.addEventListener("click", () => {
+        currentSpeedIndex = (currentSpeedIndex + 1) % speedRates.length;
+        const rate = speedRates[currentSpeedIndex];
+        speed = initSpeed / rate;
+        speedRateDisplay.innerText = rate;
+        
+        if (isPlaying) {
+            playTextAnimation(speed);
+        }
     });
     </script>
 
