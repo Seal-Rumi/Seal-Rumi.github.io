@@ -61,7 +61,7 @@
   </style>
 </head>
 <body>
-  <div class="container" style="position: relative;">
+  <div class="container">
     <h1>文字動畫測試</h1>
     <p id="text">
         文本動畫測試...
@@ -103,12 +103,7 @@
 
         你知道，這一刻的選擇，會把你帶往完全不同的結局。
     </p>
-    <button id="speedBtn" style="
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 5px 10px;
-    ">加速</button>
+
     <button id="replyBtn">動畫重播</button>
     <button id="skipBtn">跑完全部文字</button>  
   </div>
@@ -117,13 +112,12 @@
     const p = document.getElementById("text");
     const replayBtn = document.getElementById("replyBtn");
     const skipBtn = document.getElementById("skipBtn");
-    const speedBtn = document.getElementById("speedBtn");
+
     const fullText = p.innerText;
     let index = 0;
     let timer = null;
     let isPlaying = false;
     let initSpeed = 100;
-    let fastSpeed = 30;
     let speed = initSpeed;
     
     function playTextAnimation(speed = 100) {
@@ -161,28 +155,6 @@
     // 跑完全部文字
     skipBtn.addEventListener("click", () => {
         finishText();
-    });
-        // 速度切換
-    speedBtn.addEventListener("click", () => {
-      if (!isPlaying) return; // 動畫未播放時不切換
-
-      // 切換速度狀態
-      isFast = !isFast;
-      speed = isFast ? fastSpeed : initSpeed;
-      speedBtn.innerText = isFast ? "慢速" : "加速";
-
-      // 重啟動畫，從目前進度繼續
-      clearInterval(timer);
-      timer = setInterval(() => {
-        if (!isPlaying) return;
-
-        p.innerText += fullText[index];
-        index++;
-
-        if (index >= fullText.length) {
-          finishText();
-        }
-      }, speed);
     });
     </script>
 
