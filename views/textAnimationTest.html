@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>對話文字動畫測試網頁</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0f172a;
+      color: #e5e7eb;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Noto Sans TC", sans-serif;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 24px;
+      max-width: 420px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      font-size: 1.6rem;
+    }
+
+    p {
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #38bdf8;
+      color: #020617;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>文字動畫測試</h1>
+    <p id="text">
+      文本動畫測試...
+    </p>
+
+    <button id="replyBtn">動畫重播</button>
+  </div>
+
+  <script>
+    const p = document.getElementById("text");
+    const btn = document.getElementById("replyBtn");
+
+    const fullText = p.innerText; // 原始文字
+    let index = 0;
+    let timer = null;
+
+    function playTextAnimation(speed = 100) {
+      clearInterval(timer);
+      p.innerText = "";
+      index = 0;
+
+      timer = setInterval(() => {
+        p.innerText += fullText[index];
+        index++;
+
+        if (index >= fullText.length) {
+          clearInterval(timer);
+        }
+      }, speed);
+    }
+
+    // 預設自動播放
+    playTextAnimation(100);
+
+    // 點擊重播
+    btn.addEventListener("click", () => {
+      playTextAnimation(100);
+    });
+  </script>
+</body>
+
+</html>
