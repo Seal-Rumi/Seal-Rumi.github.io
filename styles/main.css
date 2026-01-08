@@ -1,14 +1,47 @@
 body {
   margin: 0;
-  background: #111;
-  color: #eee;
-  font-family: "Noto Sans TC", sans-serif;
+  background: #000;
+  display: flex;
+  justify-content: center;
 }
 
+/* 手機直立模擬框 */
+#viewport {
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+  background: #111;
+}
+
+p {
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #38bdf8;
+    color: #020617;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+/* 遊戲本體 */
 #game {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 #top-bar, #system-bar {
@@ -25,8 +58,14 @@ body {
   line-height: 1.8;
 }
 
+
+#choice-area {
+  padding: 10px 20px;
+}
+
 #choice-area button {
-  display: block;
   width: 100%;
-  margin: 6px 0;
+  padding: 14px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
