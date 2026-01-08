@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background: #111;
+  color: #eee;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+#game {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#top-bar, #system-bar {
+  padding: 10px;
+  background: #1c1c1c;
+  display: flex;
+  justify-content: space-between;
+}
+
+#text-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  line-height: 1.8;
+}
+
+#choice-area button {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+}
