@@ -49,6 +49,7 @@ button:active {
   background: #1c1c1c;
   display: flex;
   justify-content: space-between;
+  color:aliceblue
 }
 
 #text-area {
