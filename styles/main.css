@@ -50,16 +50,37 @@ button:active {
 }
 
 /* 頂部 & 系統列 */
-#top-bar,
-#system-bar {
-  padding: 10px 14px;
-  background: #14141c;
-  display: flex;
-  justify-content: space-between;
-  color: #dcdcf0;
-  border-bottom: 1px solid #1f1f2a;
+#top-bar {
+  padding: 6px 12px;   /* 高度主要來自這裡 */
+  font-size: 14px;     /* 略小一點 */
+  line-height: 1.2;    /* 避免文字撐高 */
 }
 
+#system-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  background: #111118;
+  border-bottom: 1px solid #1f1f2a;
+}
+/* 左側群組平均分配 */
+.tool-group {
+  display: flex;
+  flex: 1;
+  gap: 6px;
+}
+
+.tool-group .tool-btn {
+  flex: 1;
+}
+
+/* 右側 menu 按鈕 */
+.tool-menu {
+  margin-left: 8px;
+  padding: 8px 12px;
+  flex: 0 0 auto;
+  font-size: 16px;
+}
 /* 文字區 */
 #text-area {
   flex: 1;
@@ -94,21 +115,3 @@ button:active {
   border-radius: 8px;
 }
 
-/* 系統工具列 */
-#system-toolbar {
-  display: flex;
-  gap: 6px;
-  padding: 8px 10px;
-  background: #111118;
-  border-bottom: 1px solid #1f1f2a;
-}
-
-.tool-btn {
-  flex: 1;
-  padding: 8px 0;
-  background: #1c1c2b;
-  color: #dcdcf0;
-  border: none;
-  font-size: 14px;
-  border-radius: 6px;
-}
