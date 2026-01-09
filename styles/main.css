@@ -10,7 +10,7 @@ body {
   width: 100%;
   max-width: 420px;
   min-height: 100vh;
-  background: #111;
+  background: #bbb3b3;
 }
 
 p {
@@ -25,8 +25,8 @@ button {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    background: #38bdf8;
-    color: #020617;
+    background: #140f57;
+    color: #ececec;
     transition: transform 0.1s ease, opacity 0.1s ease;
 }
 
@@ -46,7 +46,7 @@ button:active {
 
 #top-bar, #system-bar {
   padding: 10px;
-  background: #1c1c1c;
+  background: #000000;
   display: flex;
   justify-content: space-between;
   color:aliceblue
