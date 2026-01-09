@@ -83,3 +83,20 @@ button:active {
   font-size: 14px;
   color: #ccc;
 }
+
+#system-toolbar {
+  display: flex;
+  gap: 6px;
+  padding: 6px 10px;
+  background: #0f0f0f;
+  border-bottom: 1px solid #222;
+}
+
+.tool-btn {
+  flex: 1;
+  padding: 8px 0;
+  background: #1c1c1c;
+  color: #eee;
+  border: none;
+  font-size: 14px;
+}
