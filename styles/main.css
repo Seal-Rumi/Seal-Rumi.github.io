@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  background: #000;
+  background: #0b0b0e; /* 深藍黑，比純黑舒服 */
   display: flex;
   justify-content: center;
+  color: #e6e6eb;
 }
 
 /* 手機直立模擬框 */
@@ -10,33 +11,37 @@ body {
   width: 100%;
   max-width: 420px;
   min-height: 100vh;
-  background: #000000;
+  background: #0f0f14;
 }
 
+/* 文字 */
 p {
-    opacity: 0.85;
-    line-height: 1.6;
+  opacity: 0.9;
+  line-height: 1.7;
+  color: #e8e8ee;
 }
 
+/* 按鈕 */
 button {
-    margin-top: 20px;
-    padding: 10px 18px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    background: #140f57;
-    color: #ececec;
-    transition: transform 0.1s ease, opacity 0.1s ease;
+  margin-top: 20px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4a44b6, #383283);
+  color: #f0f0f5;
+  transition: transform 0.1s ease, opacity 0.1s ease, box-shadow 0.1s ease;
 }
 
 button:hover {
-    opacity: 0.9;
+  opacity: 0.95;
 }
 
 button:active {
-    transform: scale(0.97);
+  transform: scale(0.97);
 }
+
 /* 遊戲本體 */
 #game {
   display: flex;
@@ -44,24 +49,27 @@ button:active {
   min-height: 100vh;
 }
 
-#top-bar, #system-bar {
-  padding: 10px;
-  background: #000000;
+/* 頂部 & 系統列 */
+#top-bar,
+#system-bar {
+  padding: 10px 14px;
+  background: #14141c;
   display: flex;
   justify-content: space-between;
-  color:aliceblue
+  color: #dcdcf0;
+  border-bottom: 1px solid #1f1f2a;
 }
 
+/* 文字區 */
 #text-area {
   flex: 1;
-  padding: 20px;
+  padding: 22px;
   overflow-y: auto;
-  line-height: 1.8;
 }
 
-
+/* 選項區 */
 #choice-area {
-  padding: 10px 20px;
+  padding: 10px 20px 20px;
 }
 
 #choice-area button {
@@ -71,32 +79,36 @@ button:active {
   font-size: 16px;
 }
 
+/* 狀態 / 次要 panel */
 #sub-panel {
   padding: 10px;
-  background: #bbb3b3;
+  background: #12121a;
 }
 
 .panel {
-  padding: 8px;
-  margin-bottom: 6px;
-  background: #222;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #1a1a26;
   font-size: 14px;
-  color: #ccc;
+  color: #bfc0d9;
+  border-radius: 8px;
 }
 
+/* 系統工具列 */
 #system-toolbar {
   display: flex;
   gap: 6px;
-  padding: 6px 10px;
-  background: #0f0f0f;
-  border-bottom: 1px solid #222;
+  padding: 8px 10px;
+  background: #111118;
+  border-bottom: 1px solid #1f1f2a;
 }
 
 .tool-btn {
   flex: 1;
   padding: 8px 0;
-  background: #1c1c1c;
-  color: #eee;
+  background: #1c1c2b;
+  color: #dcdcf0;
   border: none;
   font-size: 14px;
+  border-radius: 6px;
 }
