@@ -11,40 +11,51 @@
 <body>
   <div id="viewport">
     <div id="game">
-        <!-- 遊戲標題列 -->
-        <div id="top-bar">
-            <span>遊戲名稱</span>
+        <!-- 開場 / 封面場景（覆蓋） -->
+        <div class="scene active" id="scene-game-start">
+            <h1 class="game-title">遊戲名稱</h1>
+            <button id="btn-start">Game Start</button>
         </div>
-        <div id="main-panel">
-            <!-- 系統工具列 -->
-            <div id="system-toolbar">
-                <div class="tool-group">
-                    <button class="tool-btn" data-tool="log">紀錄</button>
-                    <button class="tool-btn" data-tool="status">狀態</button>
-                </div>
-            <button class="tool-btn tool-menu" data-tool="menu">≡</button>
 
+        <!-- 正式遊戲場景 -->
+        <div class="scene" id="scene-game">
+            <!-- 遊戲標題列 -->
+            <div id="top-bar">
+                <span>遊戲名稱</span>
             </div>
-            <!-- 狀態 / 資訊區 -->
-            <div class="panel" id="panel-1">區域一</div>
-            <div class="panel" id="panel-2">區域二</div>
-            <div class="panel" id="panel-3">區域三</div>
-        </div>
-        <div id="text-area">
-            <p id="story-text"></p>
-        </div>
+            <div id="main-panel">
+                <!-- 系統工具列 -->
+                <div id="system-toolbar">
+                    <div class="tool-group">
+                        <button class="tool-btn" data-tool="log">紀錄</button>
+                        <button class="tool-btn" data-tool="status">狀態</button>
+                    </div>
+                <button class="tool-btn tool-menu" data-tool="menu">≡</button>
 
-        <div id="choice-area"></div>
+                </div>
+                <!-- 狀態 / 資訊區 -->
+                <div class="panel" id="panel-1">區域一</div>
+                <div class="panel" id="panel-2">區域二</div>
+                <div class="panel" id="panel-3">區域三</div>
+            </div>
+            <!-- <div id="text-area">
+                <p id="story-text"></p>
+            </div>
 
-        <div id="system-bar">
-            <!-- <button>快轉</button> -->
-            <button>讀取</button>
-            <button>存檔</button>
-            <button>重新開始</button>
+            <div id="choice-area"></div> -->
+
+            <div id="system-bar">
+                <!-- <button>快轉</button> -->
+                <button>讀取</button>
+                <button>存檔</button>
+                <button>重新開始</button>
+            </div>
+
         </div>
 
     </div>
   </div>
+  <script src="../scripts/main.js"></script>
 </body>
 
 </html>
