@@ -23,7 +23,7 @@ p {
 
 /* 按鈕 */
 button {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   padding: 10px 18px;
   font-size: 1rem;
   border-radius: 10px;
@@ -71,7 +71,10 @@ button:active {
 }
 
 .tool-group .tool-btn {
-  flex: 1;
+  flex: 0 0 auto;      /* 不撐滿 */
+  padding: 6px 6px;   /* 實際視覺寬度 */
+  min-width: 64px;     /* 手機可點擊安全寬度 */
+  font-size: 13px;
 }
 
 /* 右側 menu 按鈕 */
