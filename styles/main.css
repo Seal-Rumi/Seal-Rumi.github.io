@@ -70,3 +70,16 @@ button:active {
   margin-bottom: 10px;
   font-size: 16px;
 }
+
+#sub-panel {
+  padding: 10px;
+  background: #151515;
+}
+
+.panel {
+  padding: 8px;
+  margin-bottom: 6px;
+  background: #222;
+  font-size: 14px;
+  color: #ccc;
+}
