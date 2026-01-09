@@ -84,12 +84,7 @@ button:active {
   flex: 0 0 auto;
   font-size: 16px;
 }
-/* 文字區 */
-#text-area {
-  flex: 1;
-  padding: 22px;
-  overflow-y: auto;
-}
+
 
 /* 選項區 */
 #choice-area {
@@ -118,3 +113,24 @@ button:active {
   border-radius: 8px;
 }
 
+#main-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 8;              /* 吃掉可用高度 */
+}
+#panel-1 {
+  flex: 1;
+}
+#panel-2 {
+  flex: 1;
+}
+#panel-3 {
+  flex: 2;
+}
+
+/* 文字區 */
+#text-area {
+  flex: 1;
+  padding: 22px;
+  overflow-y: auto;
+}
