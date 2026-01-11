@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>地圖功能開發測試</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../styles/mapTest.css">
+
+</head>
+<body>
+  <div id="viewport">
+    <div id="game">
+        <!-- 正式遊戲場景 -->
+        <div class="scene active" id="scene-game">
+            <!-- 遊戲標題列 -->
+            <div id="top-bar">
+                <span>地圖測試</span>
+            </div>
+            <div id="main-panel">
+                <!-- 系統工具列 -->
+                <!-- <div id="system-toolbar">
+                    <div class="tool-group">
+                        <button class="tool-btn" data-tool="log">紀錄</button>
+                        <button class="tool-btn" data-tool="status">狀態</button>
+                    </div>
+                <button class="tool-btn tool-menu" data-tool="menu">≡</button>
+                </div> -->
+                <!-- 狀態 / 資訊區 -->
+                <div class="panel" id="map-panel">
+                    地圖
+                    <!-- 地圖容器（可拖曳） -->
+                    <div class="map" id="map">
+                        <!-- <img
+                            src="../assets/images/map1.png"
+                            class="img-map"
+                            id="map1"
+                            alt="地圖1"
+                        /> -->
+                        <!-- 果凍島 -->
+                        <img
+                            src="../assets/images/jelly.png"
+                            class="img-place"
+                            id="place-jelly-island"
+                            alt="果凍島"
+                        />
+                        <img
+                            src="../assets/images/jelly.png"
+                            class="img-place"
+                            id="place-silent-forest"
+                            alt="寂靜森林"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+  <script>
+    // map.addEventListener('mousedown', (e) => {
+    //     if (e.target.classList.contains('img-place')) return;
+    //     map.classList.add('dragging');
+    // });
+  </script>
+  <script src="../scripts/main.js"></script>
+</body>
+
+</html>
