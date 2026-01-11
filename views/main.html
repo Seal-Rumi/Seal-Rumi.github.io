@@ -34,7 +34,31 @@
 
                 </div>
                 <!-- 狀態 / 資訊區 -->
-                <div class="panel" id="panel-1">區域一</div>
+                <div class="panel" id="map-panel">
+                    地圖
+                    <!-- 地圖容器（可拖曳） -->
+                    <div class="map" id="map">
+                        <!-- <img
+                            src="../assets/images/map1.png"
+                            class="img-map"
+                            id="map1"
+                            alt="地圖1"
+                        /> -->
+                        <!-- 果凍島 -->
+                        <img
+                            src="../assets/images/jelly.png"
+                            class="img-place"
+                            id="place-jelly-island"
+                            alt="果凍島"
+                        />
+                        <img
+                            src="../assets/images/jelly.png"
+                            class="img-place"
+                            id="place-silent-forest"
+                            alt="寂靜森林"
+                        />
+                    </div>
+                </div>
                 <div class="panel" id="panel-2">區域二</div>
                 <div class="panel" id="panel-3">區域三</div>
             </div>
@@ -55,6 +79,12 @@
 
     </div>
   </div>
+  <script>
+    // map.addEventListener('mousedown', (e) => {
+    //     if (e.target.classList.contains('img-place')) return;
+    //     map.classList.add('dragging');
+    // });
+  </script>
   <script src="../scripts/main.js"></script>
 </body>
 
